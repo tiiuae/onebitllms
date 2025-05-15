@@ -5,6 +5,10 @@
 
 > `onebitllms` is a lightweight python package that can be used to easily perform Large-Language Model (LLMs) fine-tuning following the training procedure from BitNet, to produce customized 1.58-bit LLMs.
 
+## Requirements
+
+Currently the library only works for NVIDIA CUDA compiled GPUs.
+
 ## Installation
 
 Download the package through pip:
