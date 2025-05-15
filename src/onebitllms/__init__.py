@@ -15,4 +15,4 @@ from .kernels import activation_quant_triton, weight_quant_triton
 from .layers import BitNetLinear
 from .utils import replace_linear_with_bitnet_linear, quantize_to_1bit, convert_to_bf16
 
-__version__ = "0.0.1"
+__version__ = "0.0.2.dev0"
