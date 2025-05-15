@@ -117,7 +117,7 @@ We term *1-bit fine-tuning* as simply doing continuous training from a **pre-qua
 
 *What models can I fine-tune?*
 
-To the best of our knowledge, as of today, only Falcon-Edge series models published their **pre-quantized** checkpoints, thus compatible with `onebitllms`. If in the future other models gets published together with their **pre-quantized** checkpoints, they should be compatible with `onebitllms` out-of-the-box.
+To the best of our knowledge, as of today, only Falcon-Edge and recent Microsoft BitNet series models published their **pre-quantized** checkpoints. If in the future other models gets published together with their **pre-quantized** checkpoints, they should be compatible with `onebitllms` out-of-the-box.
 
 *What else can I do with `onebitllms`?*
 
@@ -143,7 +143,7 @@ If you find this work useful for your research and work, please consider citing 
 @misc{tiionebitllms,
     title = {Falcon-E, a series of powerful, universal and fine-tunable 1.58bit language models.},
     author = {Falcon-LLM Team},
-    month = {April},
+    month = {May},
     url={https://github.com/tiiuae/onebitllms}, 
     year = {2025}
 }
