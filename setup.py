@@ -43,8 +43,12 @@ setup(
     url="https://github.com/tiiuae/onebitllms",
     package_dir={"": "src"},
     packages=find_packages("src"),
-    entry_points={},
     python_requires=">=3.9.0",
+    entry_points={
+        'console_scripts': [
+            'onebitllms = onebitllms.cli:main',
+        ],
+    },
     install_requires=[
         "torch",
         "transformers>=4.51.0",
