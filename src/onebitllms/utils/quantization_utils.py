@@ -60,7 +60,14 @@ def quantize_to_1bit(input_checkpoint_path: str, output_checkpoint_path: str):
             param_scale.view(1)
         )
 
-    modules_to_not_convert = integrations.get_keys_to_not_convert(model)
+    # Fix for the latest version of HF transformers
+    if hasattr(integrations, 'get_keys_to_not_convert'):
+        from integrations import get_keys_to_not_convert
+    else:
+        from transformers.quantizers.base import get_keys_to_not_convert
+
+    modules_to_not_convert = get_keys_to_not_convert(model)
+
 
     model = integrations.replace_with_bitnet_linear(
         model,
