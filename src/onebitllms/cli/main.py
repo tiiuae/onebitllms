@@ -32,8 +32,6 @@ def main():
     command_function = CLI_CMD_MAPPING[command_name]
     print(f"Executing: {command_function}")
     command_function(*sys.argv[2:])
-    # print(command_name)
-
 
 
 
