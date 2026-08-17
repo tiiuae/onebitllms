@@ -17,7 +17,7 @@
 python examples/sft.py \
     --model_name_or_path tiiuae/Falcon-E-1B-Base \
     --model_revision prequantized \
-    --torch_dtype bfloat16 \
+    --dtype bfloat16 \
     --learning_rate 0.0001 \
     --dataset_name trl-lib/Capybara \
     --per_device_train_batch_size 1 \
@@ -57,7 +57,7 @@ def main(script_args, training_args, model_args):
         revision=model_args.model_revision,
         trust_remote_code=model_args.trust_remote_code,
         attn_implementation=model_args.attn_implementation,
-        torch_dtype=model_args.torch_dtype,
+        torch_dtype=model_args.dtype,
         use_cache=False if training_args.gradient_checkpointing else True,
         device_map=get_kbit_device_map() if quantization_config is not None else None,
         quantization_config=quantization_config,
